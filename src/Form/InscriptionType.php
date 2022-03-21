@@ -4,6 +4,8 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ButtonType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -40,6 +42,10 @@ class InscriptionType extends AbstractType
                         'placeholder' => 'Merci de confirmer votre mot de passe.'
                     ]
                 ]
+            ])
+            ->add('nomAssociation', CheckboxType::class, [
+                'label'    => 'Je suis une association',
+                'required' => false,
             ])
             ->add('submit', SubmitType::class, [ 'label' => "S'inscrire"])
         ;
