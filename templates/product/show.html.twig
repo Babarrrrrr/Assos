@@ -11,12 +11,12 @@
         <div class="col-md-7 my-auto">
             <h3>{{ product.nom }}</h3>
             <p>{{ product.subtitle }}</p>
-            <span class="product-page-price">{{ (product.prix / 100)|number_format(2, ',', '.') }} €</span>
+            <span class="product-page-price">{{ (product.prix / 100)|number_format(2, ',', '.') }} €</span> <!--easyadmin fait x100 a chaque fois car il considere comme float le prix -->
             <hr>
             <p>
                 {{ product.description }}
             </p>
-
+            <a href="" class="btn btn-primary">Ajouter au panier</a>
         </div>
     </div>
     <hr>
